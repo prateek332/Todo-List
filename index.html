@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script defer src="main.js"></script>
+    <title>To Do List</title>
+  </head>
+  <body class="h-screen w-screen bg-slate-800">
+    <main class="p-4">
+      <form id="list-form" 
+      onsubmit="formSubmit(event)"
+      onreset="formReset(event)"
+      >
+        <input
+          name="todo"
+          type="text"
+          placeholder="enter"
+          class="p-2 border-2"
+        />
+        <button
+          type="submit"
+          class="p-2 bg-sky-500 rounded-lg hover:bg-sky-300 active:scale-90"
+        >
+          Submit
+        </button>
+        <button
+          type="reset"
+          class="p-2 bg-red-500 rounded-lg hover:bg-red-300 active:scale-90"
+        >
+          Cancel
+        </button>
+      </form>
+
+      <ul id="list" class="text-slate-200"></ul>
+      </ul>
+    </main>
+  </body>
+</html>
